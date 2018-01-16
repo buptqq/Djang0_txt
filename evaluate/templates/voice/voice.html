@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语音效果评测</title>
+</head>
+<body>
+<form enctype="multipart/form-data" action="/uploadFile/" method="post">
+    <h3>文本相似度计算</h3>
+    相似度算法选择：<br />
+    <select name="meth">
+        <option value="None"></option>>
+        <option value="cos">余弦相似度</option></select><br />
+    源文件：<br />
+    <input type="file" name="file_src" value="src file" size="20" />
+    <br/>
+    测试文件：<br />
+    <input type="file" name="file_tmp" value="test file" size="20" />
+    <br/>
+    <input type="submit" value="发送">
+    <input type="reset" value="重置">
+</form>
+<div class="similarity">
+    文件名：{{ name }}<br/>
+    匹配度结果：{{similarity}}<br/>
+</body>
+</html>
